@@ -45,6 +45,7 @@ module Sorcery
         def token_response(options = {})
           yield(options[:user], options[:failure]) if block_given?
           puts options[:user],options[:failure],options[:return_value]
+          binding.pry
           options[:return_value]
         end
       end
